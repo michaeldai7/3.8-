@@ -1,21 +1,28 @@
 import java.util.*;
 class Fifteen{
 	public static void main(String[] args){
-		Scanner sc = new Scanner(System.in)
-		int income = sc.nextInt(); 
-		int houseCost = sc.nextInt();
-		int totalChildren = sc.nextInt();
-		int schoolChildren = sc.nextInt();
-		if (income < 10000 || houseCost < 8000){
-			int tax = 0;
-		else if (income < 10000 || houseCost > 8000){
-			double tax = (double)income * 1.18;
-			if (totalChildren > 2 || schoolChildren > 1) {//housse more than 6000, has child reduction
-				int reduction = schoolChildren * 1000 + (totoalChildren - schoolChildren) * 500;
-				double tax = (double)tax - (double)reductuion;
-			}
-		}
+		Scanner sc = new Scanner(System.in);
+		double income = sc.nextDouble(); 
+		double houseCost = sc.nextDouble();
+		double totalChildren = sc.nextDouble();
+		double schoolChildren = sc.nextDouble();
+		double tax;
+		if (houseCost > 8000){
+			tax = income * 0.18;
 		
+		
+		}else{
+			tax = (income - 10000) * 0.18;
+		}
+		if (houseCost < 6000 && totalChildren > 1 && schoolChildren > 0){
+			tax = tax - ((schoolChildren * 1000) + ((totalChildren - schoolChildren)*500)) * 0.18;
+		}
+		if (tax > 2000){
+			tax *= 1.15;
+		}
+		if (tax < 0){
+			tax =0;
+		}
+		System.out.println(tax);
 	}
 }
-© 2020 GitHub,
