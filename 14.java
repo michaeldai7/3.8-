@@ -16,7 +16,38 @@ class Forteen {
   nickels = afterdimes/5;
   afternickels = afterdimes%5;
   aftercents = afternickels;
-
+  int[] coins = {quarters,dimes,nickels,aftercents};
+  int length = 0;
+  String answer = ("");
+  while(length < coins.length){
+	  if (length == 0 && quarters == 0){
+		  ;
+	  }else{
+		answer = answer + "quarter is " + quarters + ",";
+		if (length == 1 && dimes == 0){
+		  ;
+		}else{
+		  answer = answer + "dime is " + dimes + ",";
+		  if (length == 2 && nickels == 0){
+		  ;
+		}else{
+	  		answer = answer + "nickel is " + nickels + ",";
+			 if (length == 3 && aftercents == 0){
+		 ;
+	}else{
+	  answer = answer + "cents is " + aftercents + ".";
+	} 
+		}
+	
+	}
+	
+	}
+	  
+	length += 1;
+	
+  }
+  System.out.println(answer);
+/*
   if(quarters == 0 && dimes != 0 && nickels != 0 &&cents != 0)
     System.out.println(cents +" cents: " + dimes + " dimes," + nickels + " nickels, " + aftercents + " cnets.");
   else if (quarters != 0 && dimes == 0 && nickels != 0 &&cents != 0)
@@ -44,6 +75,6 @@ class Forteen {
   else if (quarters == 0 && dimes == 0 && nickels == 0 &&cents == 0)
     System.out.println(cents +" cents: " + " None.");
   else 
-    System.out.println(cents +" cents: " + quarters + " quarters," + dimes + " dimes," + nickels + " nickels, " + aftercents + " cnets.");
+    System.out.println(cents +" cents: " + quarters + " quarters," + dimes + " dimes," + nickels + " nickels, " + aftercents + " cnets.");*/
    }
 }
